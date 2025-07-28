@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^13.4.0"
+    "puppeteer": "^24.15.0"
   },
   "devDependencies": {
-    "mocha": "^9.2.1"
+    "mocha": "^11.7.1"
   }
 }
