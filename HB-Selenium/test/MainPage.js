@@ -8,10 +8,13 @@ describe('Human Benchmark', function () {
   var driver;
 
   beforeEach(async function () {
+    const options = new chrome.Options();
+    options.addArguments('--headless');
+
     driver = await new Builder()
-      .usingServer("http://localhost:4444/wd/hub")
+      .usingServer()
       .forBrowser('chrome')
-      .setChromeOptions(new chrome.Options().headless())
+      .setChromeOptions(options)
       .build();
     await driver.get('https://humanbenchmark.com/');
   })
